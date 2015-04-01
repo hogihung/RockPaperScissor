@@ -9,17 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var playableChoices = ["Rock", "Paper", "Scissors"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        println("Load er up baby!")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    func randomAIChoice() -> String {
+        let randomIndex = arc4random_uniform(UInt32(playableChoices.count))
+        let randomChoice = playableChoices[randomIndex.hashValue]
+        
+        playableChoices.removeAtIndex(randomIndex.hashValue)
+        
+        return randomChoice
     }
 
 
+    @IBAction func playGame(sender: UIButton) {
+        // Which button did the user press:
+        // Rock, Paper or Scissor?
+        let playChoice = sender.currentTitle!
+        println("User pressed the \(playChoice) button")
+    }
+    
+    
 }
 

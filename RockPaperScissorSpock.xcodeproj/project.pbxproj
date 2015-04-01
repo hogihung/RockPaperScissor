@@ -13,6 +13,7 @@
 		167ED8D91ACB79F700AC191F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167ED8D81ACB79F700AC191F /* Images.xcassets */; };
 		167ED8DC1ACB79F700AC191F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167ED8DA1ACB79F700AC191F /* LaunchScreen.xib */; };
 		167ED8E81ACB79F700AC191F /* RockPaperScissorSpockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167ED8E71ACB79F700AC191F /* RockPaperScissorSpockTests.swift */; };
+		167ED8F21ACB805900AC191F /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167ED8F11ACB805900AC191F /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		167ED8E11ACB79F700AC191F /* RockPaperScissorSpockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RockPaperScissorSpockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		167ED8E61ACB79F700AC191F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		167ED8E71ACB79F700AC191F /* RockPaperScissorSpockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissorSpockTests.swift; sourceTree = "<group>"; };
+		167ED8F11ACB805900AC191F /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				167ED8D11ACB79F700AC191F /* AppDelegate.swift */,
 				167ED8D31ACB79F700AC191F /* ViewController.swift */,
 				167ED8D51ACB79F700AC191F /* Main.storyboard */,
+				167ED8F11ACB805900AC191F /* ResultsViewController.swift */,
 				167ED8D81ACB79F700AC191F /* Images.xcassets */,
 				167ED8DA1ACB79F700AC191F /* LaunchScreen.xib */,
 				167ED8CF1ACB79F700AC191F /* Supporting Files */,
@@ -214,6 +217,7 @@
 			files = (
 				167ED8D41ACB79F700AC191F /* ViewController.swift in Sources */,
 				167ED8D21ACB79F700AC191F /* AppDelegate.swift in Sources */,
+				167ED8F21ACB805900AC191F /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
