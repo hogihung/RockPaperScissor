@@ -25,16 +25,14 @@ class ViewController: UIViewController {
         let randomIndex = arc4random_uniform(UInt32(playableChoices.count))
         let randomChoice = playableChoices[randomIndex.hashValue]
         
-        playableChoices.removeAtIndex(randomIndex.hashValue)
-        
         return randomChoice
     }
 
 
     @IBAction func playGame(sender: UIButton) {
-        // Which button did the user press:
-        // Rock, Paper or Scissor?
         let playChoice = sender.currentTitle!
+        
+        println("Computer choose: \(randomAIChoice())")
         println("User pressed the \(playChoice) button")
     }
     
