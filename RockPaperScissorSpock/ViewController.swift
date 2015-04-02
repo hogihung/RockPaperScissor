@@ -27,6 +27,14 @@ class ViewController: UIViewController {
         
         return randomChoice
     }
+    
+    func chooseWinner() -> String {
+        // Compare AI Random Choice vs. User Choice and determine
+        // who won the game.
+        var winner = "You"
+        
+        return winner
+    }
 
 
     @IBAction func playGame(sender: UIButton) {
@@ -34,6 +42,8 @@ class ViewController: UIViewController {
         
         println("Computer choose: \(randomAIChoice())")
         println("User pressed the \(playChoice) button")
+        
+        println("The winner is: \(chooseWinner())")
     }
     
     
