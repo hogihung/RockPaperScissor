@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var winner: String?
+    var gameImage: String?
+    
     var playableChoices = ["Rock", "Paper", "Scissor"]
     
     override func viewDidLoad() {
@@ -28,8 +31,8 @@ class ViewController: UIViewController {
     }
     
     func chooseWinner(user: String, computer: String) -> (String, String) {
-        var winner: String?
-        var gameImage: String?
+        //var winner: String?
+        //var gameImage: String?
         var winnerEnum = RockPaperScissorJudge.verdict(user, computerChoice: computer)
         
         if winnerEnum == .User {
@@ -58,14 +61,23 @@ class ViewController: UIViewController {
               return "tie"
         }
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let controller = segue.destinationViewController as ResultsViewController
+        
+        controller.winner = self.winner
+        controller.image = self.gameImage
+        
+    }
 
     @IBAction func playGame(sender: UIButton) {
         let playersChoice = sender.currentTitle!
         let randomChoice = randomAIChoice()
         
         chooseWinner(playersChoice, computer: randomChoice)
+        
+        performSegueWithIdentifier("displayResult", sender: self)
+
     }
-    
     
 }

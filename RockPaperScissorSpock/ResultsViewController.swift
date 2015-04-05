@@ -9,27 +9,44 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    var winner: String?
+    var image:  String?
+    
+    @IBOutlet private weak var resultLabel: UILabel!
+    @IBOutlet private weak var resultImage: UIImageView!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        displayResults()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(0.3) {
+            self.resultImage.alpha = 1
+        }
     }
-    */
+    
+    private func displayResults() {
+        println("DEBUG: Winner is \(winner) Image is \(image)")
+        var imageName: String
+        var lableText: String
+        
+        imageName = "\(image!)"
+        lableText = "\(winner!)"
+        
+        println(" W= \(lableText), I= \(imageName) ")
+        
+        imageName = imageName.lowercaseString
+        println("LC: \(imageName)")
+        println("TX: \(lableText)")
+        resultImage.image = UIImage(named: imageName)
+        resultLabel.text = lableText
+    }
+
+    @IBAction func dismiss(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 
 }

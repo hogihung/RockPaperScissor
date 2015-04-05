@@ -21,9 +21,6 @@
                                 <state key="normal" title="Rock" image="rock">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="19" y="285" width="111" height="65"/>
-                                </variation>
                                 <connections>
                                     <action selector="playGame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qYW-x3-k1Y"/>
                                 </connections>
@@ -34,9 +31,6 @@
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="257.5" y="285" width="132" height="65"/>
-                                </variation>
                                 <connections>
                                     <action selector="playGame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PXm-nX-4oS"/>
                                 </connections>
@@ -47,9 +41,6 @@
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="139" y="285" width="122" height="65"/>
-                                </variation>
                                 <connections>
                                     <action selector="playGame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bgF-QJ-aHf"/>
                                 </connections>
@@ -95,6 +86,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <segue destination="UFF-Oo-c1S" kind="presentation" identifier="displayResult" id="le9-sg-5GM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,12 +106,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tie" translatesAutoresizingMaskIntoConstraints="NO" id="i2T-fl-PQr">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="101" y="221" width="199" height="158"/>
-                                </variation>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJs-pJ-J5o">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Retry">
@@ -126,6 +114,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="177" y="433" width="37" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="dismiss:" destination="UFF-Oo-c1S" eventType="touchUpInside" id="BAD-OO-Szc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yP-xx-WfF">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -136,20 +127,26 @@
                                     <rect key="frame" x="176" y="145" width="49" height="21"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tie" translatesAutoresizingMaskIntoConstraints="NO" id="i2T-fl-PQr">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="101" y="221" width="199" height="158"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="i2T-fl-PQr"/>
                                 <exclude reference="eJs-pJ-J5o"/>
                                 <exclude reference="0yP-xx-WfF"/>
+                                <exclude reference="i2T-fl-PQr"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="i2T-fl-PQr"/>
                                 <include reference="eJs-pJ-J5o"/>
                                 <include reference="0yP-xx-WfF"/>
+                                <include reference="i2T-fl-PQr"/>
                             </mask>
                         </variation>
                     </view>
