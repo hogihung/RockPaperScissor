@@ -10,11 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var playableChoices = ["Rock", "Paper", "Scissors"]
-
+    var playableChoices = ["Rock", "Paper", "Scissor"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("Load er up baby!")
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,24 +27,45 @@ class ViewController: UIViewController {
         return randomChoice
     }
     
-    func chooseWinner() -> String {
-        // Compare AI Random Choice vs. User Choice and determine
-        // who won the game.
-        var winner = "You"
+    func chooseWinner(user: String, computer: String) -> (String, String) {
+        var winner: String?
+        var gameImage: String?
+        var winnerEnum = RockPaperScissorJudge.verdict(user, computerChoice: computer)
         
-        return winner
+        if winnerEnum == .User {
+            winner = "User"
+            gameImage = chooseImage(user)
+        } else if winnerEnum == .Computer {
+            winner = "Computer"
+            gameImage = chooseImage(computer)
+        } else {
+            winner = "Tie"
+            gameImage = "tie"
+        }
+        println("Winner: \(winner!), Result Image: \(gameImage!)")
+        return (winner!, gameImage!)
+    }
+    
+    func chooseImage(image: String) -> String {
+        switch image {
+            case "Rock":
+              return "rock-pounds-scissor"
+            case "Paper":
+              return "paper-wraps-rock"
+            case "Scissor":
+              return "scissor-cuts-paper"
+            default:
+              return "tie"
+        }
     }
 
 
     @IBAction func playGame(sender: UIButton) {
-        let playChoice = sender.currentTitle!
+        let playersChoice = sender.currentTitle!
+        let randomChoice = randomAIChoice()
         
-        println("Computer choose: \(randomAIChoice())")
-        println("User pressed the \(playChoice) button")
-        
-        println("The winner is: \(chooseWinner())")
+        chooseWinner(playersChoice, computer: randomChoice)
     }
     
     
 }
-

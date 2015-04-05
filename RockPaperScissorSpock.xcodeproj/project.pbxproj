@@ -89,9 +89,9 @@
 				167ED8D51ACB79F700AC191F /* Main.storyboard */,
 				167ED8DA1ACB79F700AC191F /* LaunchScreen.xib */,
 				167ED8F11ACB805900AC191F /* ResultsViewController.swift */,
+				167ED8F51ACDFB2F00AC191F /* RockPaperScissorJudge.swift */,
 				167ED8D81ACB79F700AC191F /* Images.xcassets */,
 				167ED8CF1ACB79F700AC191F /* Supporting Files */,
-				167ED8F51ACDFB2F00AC191F /* RockPaperScissorJudge.swift */,
 			);
 			path = RockPaperScissorSpock;
 			sourceTree = "<group>";
@@ -419,6 +419,7 @@
 				167ED8ED1ACB79F700AC191F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		167ED8EE1ACB79F700AC191F /* Build configuration list for PBXNativeTarget "RockPaperScissorSpockTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +428,7 @@
 				167ED8F01ACB79F700AC191F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

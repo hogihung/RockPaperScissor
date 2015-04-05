@@ -18,29 +18,38 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWW-25-JGJ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="rock" image="rock">
+                                <state key="normal" title="Rock" image="rock">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="19" y="285" width="111" height="65"/>
+                                </variation>
                                 <connections>
                                     <action selector="playGame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qYW-x3-k1Y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FK-Vc-zgl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="scissor" image="scissor">
+                                <state key="normal" title="Scissor" image="scissor">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="257.5" y="285" width="132" height="65"/>
+                                </variation>
                                 <connections>
                                     <action selector="playGame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PXm-nX-4oS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIX-D5-7mZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="paper" image="paper">
+                                <state key="normal" title="Paper" image="paper">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="139" y="285" width="122" height="65"/>
+                                </variation>
                                 <connections>
                                     <action selector="playGame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bgF-QJ-aHf"/>
                                 </connections>
@@ -62,12 +71,12 @@
                                 <exclude reference="gIX-D5-7mZ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="2W9-sw-NVR"/>
-                                <exclude reference="lz0-sW-9zb"/>
-                                <exclude reference="8yk-zJ-3U3"/>
-                                <exclude reference="b6X-N6-sUQ"/>
                                 <exclude reference="Gb4-it-Nrc"/>
                                 <exclude reference="r4j-hg-UVu"/>
+                                <exclude reference="8yk-zJ-3U3"/>
+                                <exclude reference="b6X-N6-sUQ"/>
+                                <exclude reference="2W9-sw-NVR"/>
+                                <exclude reference="lz0-sW-9zb"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -77,12 +86,12 @@
                                 <include reference="gIX-D5-7mZ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="2W9-sw-NVR"/>
-                                <include reference="lz0-sW-9zb"/>
-                                <include reference="8yk-zJ-3U3"/>
-                                <include reference="b6X-N6-sUQ"/>
                                 <include reference="Gb4-it-Nrc"/>
                                 <include reference="r4j-hg-UVu"/>
+                                <include reference="8yk-zJ-3U3"/>
+                                <include reference="b6X-N6-sUQ"/>
+                                <include reference="2W9-sw-NVR"/>
+                                <include reference="lz0-sW-9zb"/>
                             </mask>
                         </variation>
                     </view>
@@ -100,6 +109,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RX8-C2-9Ev"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TSH-Q6-o4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tie" translatesAutoresizingMaskIntoConstraints="NO" id="i2T-fl-PQr">
