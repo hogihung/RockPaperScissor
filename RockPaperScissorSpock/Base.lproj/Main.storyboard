@@ -150,6 +150,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="resultImage" destination="i2T-fl-PQr" id="Af9-Jn-WMZ"/>
+                        <outlet property="resultLabel" destination="0yP-xx-WfF" id="RJU-qx-8zs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Uh-LT-7u9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -31,8 +31,6 @@ class ViewController: UIViewController {
     }
     
     func chooseWinner(user: String, computer: String) -> (String, String) {
-        //var winner: String?
-        //var gameImage: String?
         var winnerEnum = RockPaperScissorJudge.verdict(user, computerChoice: computer)
         
         if winnerEnum == .User {
@@ -77,7 +75,6 @@ class ViewController: UIViewController {
         chooseWinner(playersChoice, computer: randomChoice)
         
         performSegueWithIdentifier("displayResult", sender: self)
-
     }
     
 }

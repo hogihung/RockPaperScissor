@@ -28,25 +28,19 @@ class ResultsViewController: UIViewController {
     }
     
     private func displayResults() {
-        println("DEBUG: Winner is \(winner) Image is \(image)")
         var imageName: String
         var lableText: String
         
         imageName = "\(image!)"
         lableText = "\(winner!)"
         
-        println(" W= \(lableText), I= \(imageName) ")
-        
-        imageName = imageName.lowercaseString
-        println("LC: \(imageName)")
-        println("TX: \(lableText)")
-        resultImage.image = UIImage(named: imageName)
         resultLabel.text = lableText
+        resultImage.image = UIImage(named: imageName)
+        resultImage.alpha = 0
     }
 
     @IBAction func dismiss(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-
 }

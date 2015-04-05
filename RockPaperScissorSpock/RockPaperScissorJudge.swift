@@ -19,25 +19,18 @@ struct RockPaperScissorJudge{
         switch (userChoice, computerChoice) {
         
         case ("Rock", "Paper"):
-            println("Winner: Computer")
             return .Computer
         case ("Scissor", "Rock"):
-            println("Winner: Computer")
             return .Computer
         case ("Paper", "Scissor"):
-            println("Winner: Computer")
             return .Computer
         case ("Rock", "Scissor"):
-            println("Winner: User")
             return .User
         case ("Scissor", "Paper"):
-            println("Winner: User")
             return .User
         case ("Paper", "Rock"):
-            println("Winner: User")
             return .User
         default:
-            println("We have a Tie!")
             return .Tie
         }
     }
